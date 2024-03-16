@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Bahagia</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS */
+    body {
+      background-image: url('https://assets.yellowtrace.com.au/wp-content/uploads/2021/10/20163620/Veter-Design-ARTEST-Fine-Dining-Restaurant-Moscow-Ground-Floor-Dark-World-Yellowtrace-07.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      
+    }
+    #backBtn {
+      display: none; /* tombol kembali disembunyikan secara default */
+    }
+
+    #restaurantCarousel {
+        display: none;
+    }
+
+    #foodCarousel {
+        display: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <a class="navbar-brand" href="#">Restaurant Bahagia</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item text-dark">
+          <a class="nav-link" href="./UTS_halaman_home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./UTS_halaman_utama.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a id="galleryBtn" class="nav-link" href="./UTS_halaman_galery.html" >Gallery</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Content -->
+  <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center text-white h-100">
+    <h1 class="display-4 mb-4">Selamat Datang di Restaurant Bahagia</h1>
+    <p class="lead mb-4">Nikmati hidangan lezat kami dalam suasana yang nyaman.</p>
+
+    <!-- FoodCarousel -->
+    <div id="carouselExampleIndicators" class="carousel slide mx-auto" data-ride="carousel" style="max-width: 50%;">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div id="foodCarousel" class="carousel-inner" style="margin-bottom: 50px; width: 450px;">
+            <div class="carousel-item active d-flex justify-content-center">
+                <img src="https://assets.cntraveller.in/photos/651e65983734f323ef3d37fe/16:9/w_7936,h_4464,c_limit/SWING-9.jpg" class="w-100" alt="..." style="width: 300px; height: 250px;">
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets.cntraveller.in/photos/651e635bc4b46eb50567610e/master/w_1600,c_limit/Copy%20of%20SWING-14.jpg" class="w-100" alt="..." style="width: 300px; height: 250px;">
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets.cntraveller.in/photos/651e62c2c4b46eb50567610c/master/w_1600,c_limit/SWING-17.jpg" class="w-100" alt="..." style="width: 300px; height: 250px;">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- RestaurantCarousel -->
+    <div id="carouselExampleIndicators" class="carousel slide mx-auto" data-ride="carousel" style="max-width: 50%;">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div id="restaurantCarousel" class="carousel-inner" style="margin-bottom: 50px; width: 450px;">
+            <div class="carousel-item active d-flex justify-content-center">
+                <img src="https://assets.cntraveller.in/photos/651e65983734f323ef3d37fe/16:9/w_7936,h_4464,c_limit/SWING-9.jpg" class="w-100" alt="..." style="width: 300px; height: 250px;">
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets.cntraveller.in/photos/651e635bc4b46eb50567610e/master/w_1600,c_limit/Copy%20of%20SWING-14.jpg" class="w-100" alt="..." style="width: 300px; height: 250px;">
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets.cntraveller.in/photos/651e62c2c4b46eb50567610c/master/w_1600,c_limit/SWING-17.jpg" class="w-100" alt="..." style="width: 300px; height: 250px;">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="mb-4">
+    <div>
+      <a href="./UTS_halaman_utama.html" class="btn btn-primary mr-2">Menu</a>
+      <button class="btn btn-primary" id="galleryFoodBtn">Food Gallery</button> <!-- tombol galeri makanan -->
+      <button class="btn btn-primary" id="galleryRestoBtn">Restaurant Gallery</button> <!-- tombol galeri restoran -->
+      <button class="btn btn-primary" id="backBtn">Kembali</button> <!-- tombol kembali -->
+    </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Fungsi untuk menampilkan tombol kembali dan menyembunyikan tombol galeri
+    function showBackBtn() {
+      document.getElementById('backBtn').style.display = 'inline';
+      document.getElementById('galleryBtn').style.display = 'none';
+      document.getElementById('galleryFoodBtn').style.display = 'none';
+      document.getElementById('galleryRestoBtn').style.display = 'none';
+    }
+
+    function showRestaurantCarousel() {
+        document.getElementById('restaurantCarousel').style.display = 'block';
+    }
+
+    function showFoodCarousel() {
+        document.getElementById('foodCarousel').style.display = 'block';
+    }
+
+    // Event listener untuk tombol gallery food
+    document.getElementById('galleryFoodBtn').addEventListener('click', function() {
+      showBackBtn();
+      showFoodCarousel();
+    });
+
+    // Event listener untuk tombol gallery restoran
+    document.getElementById('galleryRestoBtn').addEventListener('click', function() {
+      showBackBtn();
+      showRestaurantCarousel();
+    });
+
+    // Event listener untuk tombol kembali
+    document.getElementById('backBtn').addEventListener('click', function() {
+      document.getElementById('backBtn').style.display = 'none';
+      document.getElementById('galleryBtn').style.display = 'flex'; // Tombol gallery ditampilkan kembali
+      document.getElementById('galleryFoodBtn').style.display = 'inline'; // Tombol gallery makanan ditampilkan kembali
+      document.getElementById('galleryRestoBtn').style.display = 'inline'; // Tombol gallery restoran ditampilkan kembali\
+      document.getElementById('restaurantCarousel').style.display = 'none';
+      document.getElementById('foodCarousel').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
