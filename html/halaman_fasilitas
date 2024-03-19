@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasilitas Restoran Bahagia</title>
+    <style>
+        /* CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .facility {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .facility img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .facility h2 {
+            margin-top: 0;
+        }
+        .facility p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fasilitas Restoran Bahagia</h1>
+    </header>
+    <!-- Navbar -->
+    <nav>
+        <a href="./UTS_halaman_home.html">Home</a>
+        <a href="./UTS_halaman_utama.html">Menu</a>
+        <a href="./UTS_halaman_kontak.html">Kontak</a>
+    </nav>
+    <section>
+        <div class="container">
+            <!-- Fasilitas -->
+            <div class="facility">
+                <img src="https://b.zmtcdn.com/data/pictures/6/20999186/4142bbe88d845ef972418225caf41868.jpg?output-format=webp&fit=around|750:500&crop=750:500;*,*" alt="Interior Restoran">
+                <h2>Interior yang Nyaman</h2>
+                <p>Restoran kami memiliki interior yang nyaman dan atmosfer yang menyenangkan untuk menikmati makanan.</p>
+            </div>
+            <div class="facility">
+                <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/indizone/2019/12/05/BysvWe/t_5de8c69666ebe.jpg" alt="Wi-Fi">
+                <h2>Wi-Fi Gratis</h2>
+                <p>Kami menyediakan akses Wi-Fi gratis bagi para pelanggan untuk kenyamanan selama berkunjung.</p>
+            </div>
+            <div class="facility">
+                <img src="https://astradigitaldigiroomuat.blob.core.windows.net/storage-uat-001/apa-itu-valet-parking.jpg" alt="Tempat Parkir">
+                <h2>Tempat Parkir Luas</h2>
+                <p>Kami memiliki tempat parkir yang luas dan aman untuk kendaraan pelanggan.</p>
+            </div>
+            <div class="facility">
+                <img src="https://kuyentertainment.s3.ap-southeast-1.amazonaws.com/images/post/b0cf7e1a-5f66-44bc-b504-c398cdc32181_original.jpg" alt="Live Music">
+                <h2>Live Music</h2>
+                <p>Nikmati hiburan live music setiap malam di restoran kami untuk menambah keseruan saat makan malam.</p>
+            </div>
+        </div>
+    </section>
+    <footer style="background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
+        &copy; 2024 Restoran Bahagia. All rights reserved.
+    </footer>
+</body>
+</html>
 
