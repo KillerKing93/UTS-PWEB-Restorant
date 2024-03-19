@@ -14,7 +14,7 @@
       background-position: center;
       height: 100vh;
     }
-
+    
     /* Style untuk kotak putih */
     .white-box {
       background-color: white;
@@ -23,7 +23,7 @@
       padding: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
     }
-
+    
     /* Adjust margin for container */
     .container-fluid {
       margin-top: 80px; /* Change this value as needed */
@@ -31,7 +31,7 @@
   </style>
 </head>
 <body>
-
+  
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> <!-- Add fixed-top class -->
     <a class="navbar-brand" href="./UTS_halaman_pengenalan.html">Restaurant Bahagia</a>
@@ -55,95 +55,95 @@
       </ul>
     </div>
   </nav>
-
+  
   <!-- Home Content -->
   <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center text-white mt-5"> <!-- Add mt-5 class -->
     <h1 class="display-4" style="color:red;font-size: 60px;"><strong>Selamat Datang di Restaurant Bahagia</strong></h1>
     <p class="lead" style="color:forestgreen"><strong>Nikmati hidangan lezat kami dalam suasana yang nyaman.</strong></p>
-
+    
     <!-- Menampilkan Data Reservasi -->
     <div id="reservationData" class="white-box">
       <!-- Data reservasi akan ditampilkan di sini -->
     </div>
-
+    
     <!-- Menampilkan Informasi Pesanan Makanan dan Minuman -->
     <div id="orderDetails" class="mt-4 white-box">
       <!-- Informasi pesanan makanan dan minuman akan ditampilkan di sini -->
     </div>
-
+    
     <div class="mb-4 mt-5">
       <a href="./UTS_halaman_utama.html" class="btn btn-primary mr-2">Menu</a>
       <a href="./UTS_halaman_galery.html" class="btn btn-primary">Gallery</a>
     </div>
   </div>
-
-<!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-  // Ambil data reservasi dari parameter URL
-  const params = new URLSearchParams(window.location.search);
-  const name = params.get('name');
-  const email = params.get('email');
-  const date = params.get('date');
-  const time = params.get('time');
-
-  // Tampilkan data reservasi di dalam elemen dengan id "reservationData"
-  const reservationDataElement = document.getElementById('reservationData');
-  reservationDataElement.innerHTML = `
+  
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+    // Ambil data reservasi dari parameter URL
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    const email = params.get('email');
+    const date = params.get('date');
+    const time = params.get('time');
+    
+    // Tampilkan data reservasi di dalam elemen dengan id "reservationData"
+    const reservationDataElement = document.getElementById('reservationData');
+    reservationDataElement.innerHTML = `
     <h2>Detail Reservasi</h2>
     <p>Nama: ${name}</p>
     <p>Email: ${email}</p>
     <p>Tanggal: ${date}</p>
     <p>Waktu: ${time}</p>
-  `;
-
-  // Ambil data pesanan makanan dan minuman dari parameter URL
-  const orders = {
-    'Steak Holgu': parseInt(params.get('steak_holgu')) || 0, // Perbaikan typo di sini
-    'Sate Ayam': parseInt(params.get('sate_ayam')) || 0,
-    'Gado-Gado': parseInt(params.get('gado_gado')) || 0,
-    'Pindang Sapi': parseInt(params.get('pindang_sapi')) || 0,
-    'Ayam Gulai': parseInt(params.get('ayam_gulai')) || 0,
-    'Jus Mangga': parseInt(params.get('jus_mangga')) || 0,
-    'Jus Alpukat': parseInt(params.get('jus_alpukat')) || 0,
-    'Espresso': parseInt(params.get('espresso')) || 0,
-    'Arabika': parseInt(params.get('arabika')) || 0,
-    'Lemon Tea': parseInt(params.get('lemon_tea')) || 0
-  };
-
-  // Filter hanya makanan dan minuman yang jumlahnya lebih dari 0
-  const filteredOrders = Object.fromEntries(
-    Object.entries(orders).filter(([key, value]) => value > 0)
-  );
-
-  // Hitung harga total makanan dan minuman
-  let totalMakanan = 0;
-  let totalMinuman = 0;
-  let totalHargaMakanan = 0;
-  let totalHargaMinuman = 0;
-  for (const [item, quantity] of Object.entries(filteredOrders)) {
-    let hargaPerItem = getMenuPrice(item);
-    let hargaTotalItem = hargaPerItem * quantity;
-    if (item.includes('Steak') || item.includes('Sate') || item.includes('Gulai') || item.includes('Pindang')) {
-      totalMakanan += quantity;
-      totalHargaMakanan += hargaTotalItem;
-    } else {
-      totalMinuman += quantity;
-      totalHargaMinuman += hargaTotalItem;
-    }
-    filteredOrders[item] = {
-      'Harga per Item': hargaPerItem,
-      'Jumlah yang Dipesan': quantity,
-      'Jumlah Harga': hargaTotalItem
+    `;
+    
+    // Ambil data pesanan makanan dan minuman dari parameter URL
+    const orders = {
+      'Steak Holgu': parseInt(params.get('steak_holgu')) || 0, // Perbaikan typo di sini
+      'Sate Ayam': parseInt(params.get('sate_ayam')) || 0,
+      'Gado-Gado': parseInt(params.get('gado_gado')) || 0,
+      'Pindang Sapi': parseInt(params.get('pindang_sapi')) || 0,
+      'Ayam Gulai': parseInt(params.get('ayam_gulai')) || 0,
+      'Jus Mangga': parseInt(params.get('jus_mangga')) || 0,
+      'Jus Alpukat': parseInt(params.get('jus_alpukat')) || 0,
+      'Espresso': parseInt(params.get('espresso')) || 0,
+      'Arabika': parseInt(params.get('arabika')) || 0,
+      'Lemon Tea': parseInt(params.get('lemon_tea')) || 0
     };
-  }
-
-  // Tampilkan informasi pesanan makanan dan minuman di dalam elemen dengan id "orderDetails"
-  const orderDetailsElement = document.getElementById('orderDetails');
-  orderDetailsElement.innerHTML = `
+    
+    // Filter hanya makanan dan minuman yang jumlahnya lebih dari 0
+    const filteredOrders = Object.fromEntries(
+    Object.entries(orders).filter(([key, value]) => value > 0)
+    );
+    
+    // Hitung harga total makanan dan minuman
+    let totalMakanan = 0;
+    let totalMinuman = 0;
+    let totalHargaMakanan = 0;
+    let totalHargaMinuman = 0;
+    for (const [item, quantity] of Object.entries(filteredOrders)) {
+      let hargaPerItem = getMenuPrice(item);
+      let hargaTotalItem = hargaPerItem * quantity;
+      if (item.includes('Steak') || item.includes('Sate') || item.includes('Gulai') || item.includes('Pindang')) {
+        totalMakanan += quantity;
+        totalHargaMakanan += hargaTotalItem;
+      } else {
+        totalMinuman += quantity;
+        totalHargaMinuman += hargaTotalItem;
+      }
+      filteredOrders[item] = {
+        'Harga per Item': hargaPerItem,
+        'Jumlah yang Dipesan': quantity,
+        'Jumlah Harga': hargaTotalItem
+      };
+    }
+    
+    // Tampilkan informasi pesanan makanan dan minuman di dalam elemen dengan id "orderDetails"
+    const orderDetailsElement = document.getElementById('orderDetails');
+    orderDetailsElement.innerHTML = `
     <h2>Detail Pesanan</h2>
     <p>Makanan dan Minuman:</p>
     <ul>
@@ -152,35 +152,34 @@
     <p>Total Makanan: Rp. ${totalHargaMakanan.toLocaleString()}</p>
     <p>Total Minuman: Rp. ${totalHargaMinuman.toLocaleString()}</p>
     <p>Total Pesanan: Rp. ${(totalHargaMakanan + totalHargaMinuman).toLocaleString()}</p>
-  `;
-
-  // Fungsi untuk mendapatkan harga menu
-  function getMenuPrice(item) {
-    switch (item) {
-      case 'Steak Holgu':
+    `;
+    
+    // Fungsi untuk mendapatkan harga menu
+    function getMenuPrice(item) {
+      switch (item) {
+        case 'Steak Holgu':
         return 65000;
-      case 'Sate Ayam':
+        case 'Sate Ayam':
         return 20000;
-      case 'Gado-Gado':
+        case 'Gado-Gado':
         return 12000;
-      case 'Pindang Sapi':
+        case 'Pindang Sapi':
         return 45000;
-      case 'Ayam Gulai':
+        case 'Ayam Gulai':
         return 15000;
-      case 'Jus Mangga':
-      case 'Jus Alpukat':
+        case 'Jus Mangga':
+        case 'Jus Alpukat':
         return 15000;
-      case 'Espresso':
-      case 'Arabika':
+        case 'Espresso':
+        case 'Arabika':
         return 25000;
-      case 'Lemon Tea':
+        case 'Lemon Tea':
         return 55000;
-      default:
+        default:
         return 0;
+      }
     }
-  }
-</script>
-
+  </script>
+  
 </body>
 </html>
- 
