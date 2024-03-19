@@ -44,11 +44,13 @@
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Menengahkan gambar */
         }
         .facility img {
-            width: 100%;
+            width: 50%;
             border-radius: 5px;
-            margin-bottom: 10px;
+            margin-bottom: 50px;
+            display: inline-block; /* Menengahkan gambar */
         }
         .facility h2 {
             margin-top: 0;
@@ -66,7 +68,9 @@
     <nav>
         <a href="./UTS_halaman_home.html">Home</a>
         <a href="./UTS_halaman_utama.html">Menu</a>
-        <a href="./UTS_halaman_kontak.html">Kontak</a>
+        <a href="./UTS_halaman_kontak.html">Contact</a>
+        <a href="./UTS_halaman_pengenalan.html" >About</a>
+        <a href="UTS_halaman_galery.html">Gallery</a>
     </nav>
     <section>
         <div class="container">
@@ -91,6 +95,16 @@
                 <h2>Live Music</h2>
                 <p>Nikmati hiburan live music setiap malam di restoran kami untuk menambah keseruan saat makan malam.</p>
             </div>
+            <div class="facility">
+                <img src="https://b.zmtcdn.com/data/pictures/6/20999186/4142bbe88d845ef972418225caf41868.jpg?output-format=webp&fit=around|750:500&crop=750:500;*,*" alt="Interior Restoran">
+                <h2>Interior yang Nyaman</h2>
+                <p>Restoran kami memiliki interior yang nyaman dan atmosfer yang menyenangkan untuk menikmati makanan.</p>
+            </div>
+            <div class="facility">
+                <img src="https://casaindonesia.com/lkgallery/teaser/restoran-instagramable-baru-bergaya-romawi-di-bali-casa-indonesia-7_49_20210516225624oesh6c.jpg" alt="Spot foto">
+                <h2>Spot foto</h2>
+                <p>Nikmati nuansa spot foto yang sangat Estetika dan modern serta bersifat outdoor.</p>
+            </div>
         </div>
     </section>
     <footer style="background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
@@ -98,4 +112,3 @@
     </footer>
 </body>
 </html>
-
